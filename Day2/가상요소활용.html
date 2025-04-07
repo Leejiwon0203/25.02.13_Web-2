@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소활용</title>
+    <style>
+        body {
+            background-color: rgb(171, 231, 171);
+        }
+        article {
+           width: 100%;
+           height: 500px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            border: 1px solid rgb(26, 158, 26);
+            margin: 16px;
+            padding: 0 16px;
+            height: 80px;
+            position: relative;
+        }
+
+        li::before {
+            content: "";
+            height: 80px;
+            width: 0;
+            background-color: rgb(68, 165, 68);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: 0.7s;
+            /* 뒤로 보내기 */
+        }
+
+        li:nth-child(1):hover::before {
+            width: 20%;
+        }
+        li:nth-child(2):hover::before {
+            width: 40%;
+        }
+        li:nth-child(3):hover::before {
+            width: 60%;
+        }
+        li:nth-child(4):hover::before {
+            width: 80%;
+        }
+        li:nth-child(5):hover::before {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>웹부터 포트폴리오까지</h1>
+        <ul>
+            <li>
+                <h1>20%</h1>
+            </li>
+            <li>
+                <h1>40%</h1>
+            </li>
+            <li>
+                <h1>60%</h1>
+            </li>
+            <li>
+                <h1>80%</h1>
+            </li>
+            <li>
+                <h1>100%</h1>
+            </li>
+        </ul>
+    </article>
+</body>
+</html>

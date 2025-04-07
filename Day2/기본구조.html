@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본구조</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: pink;
+            color: white;
+            align-items: center;
+            padding: 16px 32px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            margin: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 16px;
+            margin: 16px;
+            border-radius: 10px;
+            padding: 16px;
+            background-color: lightcoral;
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        main {
+            display: flex;
+            width: 100%;
+            margin: 16px 0;
+        }
+
+        .script {
+            width: 70%;
+        }
+
+        .search {
+            width: 30%;
+            padding: 16px;
+        }
+
+        .text {
+            border: 1px solid pink;
+            margin: 16px;
+        }
+        footer {
+            background-color: lightcoral;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            font-size: 40px;
+            font-weight: 900;
+            height: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>logo</h1>
+        <ul>
+            <li>
+                <a href="#">메뉴</a>
+            </li>
+            <li>
+                <a href="#">메뉴</a>
+            </li>
+            <li>
+                <a href="#">메뉴</a>
+            </li>
+        </ul>
+        <!-- 버튼도 사용 가능 -->
+    </header>
+    <main>
+        <section class="script">
+            <div class="text">
+                <!-- div 말고 article로 하면 좋을듯? -->
+                <h2>옆집에 고양이가 침입했다!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id doloremque quae laborum iste
+                    repudiandae quisquam tempore delectus, nulla sit architecto voluptas, quod ab recusandae nisi!
+                    Ratione excepturi repudiandae facilis.</p>
+            </div>
+            <div class="text">
+                <h2>바다에서 쉬고있는 점박이물범!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id doloremque quae laborum iste
+                    repudiandae quisquam tempore delectus, nulla sit architecto voluptas, quod ab recusandae nisi!
+                    Ratione excepturi repudiandae facilis.</p>
+            </div>
+            <div class="text">
+                <h2>건강을 지키는 생활습관 10가지</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id doloremque quae laborum iste
+                    repudiandae quisquam tempore delectus, nulla sit architecto voluptas, quod ab recusandae nisi!
+                    Ratione excepturi repudiandae facilis.</p>
+            </div>
+            <div class="text">
+                <h2>아이돌 커플 탄생?!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id doloremque quae laborum iste
+                    repudiandae quisquam tempore delectus, nulla sit architecto voluptas, quod ab recusandae nisi!
+                    Ratione excepturi repudiandae facilis.</p>
+            </div>
+            <div class="text">
+                <h2>종합영양제 과연 효과 있을까?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id doloremque quae laborum iste
+                    repudiandae quisquam tempore delectus, nulla sit architecto voluptas, quod ab recusandae nisi!
+                    Ratione excepturi repudiandae facilis.</p>
+            </div>
+            <div class="text">
+                <h2>월요일 직장인 피로도 99%라는 연구결과...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id doloremque quae laborum iste
+                    repudiandae quisquam tempore delectus, nulla sit architecto voluptas, quod ab recusandae nisi!
+                    Ratione excepturi repudiandae facilis.</p>
+            </div>
+        </section>
+        <aside class="search">
+            <!-- aside는 좀 덜 중요한 블럭임 -->
+            <h2>Right aside</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, ea beatae, fuga dolorum impedit adipisci
+                officiis aperiam quia eos debitis, eius fugiat consectetur perspiciatis. Magni exercitationem voluptas
+                officiis quo quod?</p>
+            <input type="text" value="이름입력">
+            <input type="submit" value="제출">
+            <!-- 그냥 button으로 쓰는게 더 좋은건가? -->
+            <div>
+                <h2>광고</h2>
+                <p>광고 내용</p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        푸터입니다
+    </footer>
+</body>
+
+</html>
