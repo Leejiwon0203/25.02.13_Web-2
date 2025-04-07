@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자코모</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+        }
+        section {
+            display: flex;
+            width: 100%;
+        }
+        figure {
+            position: relative;
+            width: auto;
+            height: 800px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.7s;
+        }
+        figure > img:hover {
+            transform: scale(1.1);
+        }
+        div {
+            position: absolute;
+            bottom:100px;
+            left: 50%;
+            /* 50%의 시작점에 있기 때문에 translate 써주면 됨 */
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+        }   
+        h2 {
+            font-size: 48px;
+            margin: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <figure>
+            <img src="https://cdn.crowdpic.net/list-thumb/thumb_l_D623AE308211C3678E61EC0E3FF3C969.jpg" alt="">
+            <!-- 이미지에 호버같은 기능을 넣으려면 html 컨텐츠로 이미지를 넣어줘야 하는게 맞음 -->
+            <div>
+                <h2>Leather</h2>
+                <p>프리미엄 가죽</p>
+            </div>
+        </figure>
+        <figure>
+            <img src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/14Fa/image/joib7vCDm4iIP7rNJR2ojev0A20.jpg"
+                alt="">
+            <div>
+                <h2>Fabric</h2>
+                <p>기능성 패브릭</p>
+            </div>
+        </figure>
+        <figure>
+            <img src="https://t1.daumcdn.net/thumb/R720x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/1dEO/image/CIieqAqy0KlR6UdFHxrc1NsGtVM.jpg"
+                alt="">
+            <div>
+                <h2>Material</h2>
+                <p>올바른 내장재</p>
+            </div>
+        </figure>
+</body>
+
+</html>

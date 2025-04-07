@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 16px;
+        }
+        .translate > div {
+            background-color: coral;
+        }
+
+        .scale > div {
+            background-color: lightcoral;
+        }
+
+        .skew > div {
+            background-color: lightpink;
+        }
+
+        .rotate_box > div {
+            background-color: lightseagreen;
+        }
+
+        .translatex {
+            transform: translateX(-50%);
+            /* 자기 크기 만큼 이동함 마진 신경 안 쓴다 */
+        }
+
+        .translatey {
+            transform: translateY(10px);
+        }
+        
+        .translatea {
+            transform: translate(-50px, -100px);
+            /* x축으로 50px, y축으로 100px 이동 */
+        }
+
+        .scaleX {
+            transform: scaleX(1.5);
+            /* x축으로 1.5배 확대 */
+        }
+
+        .scaleY {
+            transform: scaleY(0.7);
+            /* y축으로 0.7배 확대 */
+        }
+
+        .scaleA {
+            transform: scale(1.5, 0.7);
+            /* x축으로 1.5배, y축으로 0.7배 확대 */
+        }
+
+        .scaleA:hover {
+            transform: scale(1.5, 0.8);
+            /* x축으로 1.5배, y축으로 0.7배 확대 */
+            transition: 0.5s;
+        }
+
+        .skewx {
+            transform: skewX(-30deg);
+            /* x축으로 30도 기울임 */
+        }
+
+        .skewy {
+            transform: skewY(10deg);
+            /* y축으로 30도 기울임 */
+        }
+        .skewa {
+            transform: skew(30deg, 10deg);
+            /* x축으로 30도, y축으로 20도 기울임 */
+        }
+
+        .rotate_box {
+            transform: rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+    <article class="translate">
+        <div class="translatex"></div>
+        <div class="translatey"></div>
+        <div class="translatea"></div>
+    </article>
+
+    <article class="scale">
+        <div class="scaleX"></div>
+        <div class="scaleY"></div>
+        <div class="scaleA"></div>
+    </article>
+
+    <article class="skew">
+        <div class="skewx"></div>
+        <div class="skewy"></div>
+        <div class="skewa"></div>
+    </article>
+
+    <article class="rotate_box">
+        <div class="rotate"></div>
+    </article>
+</body>
+</html>
