@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            /* animation-name: boxAnimation; */
+            /* 내가 만드는 애니메이션을 만드려면 이름을 지정해야함 */
+            /* animation-duration: 5s; */
+            /* 애니메이션 지속시간 */
+            /* animation-delay: 1s; */
+            /* 애니메이션 시작시간 */
+            /* animation-iteration-count: infinite; */
+            /* 애니메이션 반복횟수 infinite는 무한반복 */
+            /* animation-direction: reverse; */
+            /* 애니메이션 방향 reverse는 반대방향으로 */
+            /* 애니메이션 방향 */
+            /* animation-fill-mode: forwards; */
+            /* forwards는 끝나는 속성으로 멈추게 하는거 */
+            /* backwards는 시작하는 지점으로 변했다가 끝나면 원래대로  */
+            /* animation-play-state: running; */
+            /* running은 애니메이션이 진행중인 상태 */ 
+            /* paused는 애니메이션이 멈춘 상태 */
+            /* animation: name이름 duration지속시간 timing-function 반복횟수 direction애니메이션 방향 fill-mode전후상태 plat-state상태 play-state 재생정지; */
+            animation: boxAnimation 6s linear 1s 1 reverse forwards running;
+        }
+        .box:nth-child(1):hover {
+            animation-play-state: paused;
+            /* 마우스 올리면 멈춤! */
+        }
+
+        .box:nth-child(1) {
+            background-color: rgb(253, 76, 76);
+            animation-timing-function: linear;
+        }
+        .box:nth-child(2) {
+            background-color: rgb(255, 141, 76);
+            animation-timing-function: ease;
+        }
+        .box:nth-child(3) {
+            background-color: rgb(246, 255, 125);
+            animation-timing-function: ease-in;
+        }
+        .box:nth-child(4) {
+            background-color: rgb(151, 255, 151);
+            animation-timing-function: ease-out;
+        }
+        .box:nth-child(5) {
+            background-color: rgb(146, 147, 250);
+            animation-timing-function: ease-in-out;
+        }
+        .box:nth-child(6) {
+            background-color: rgb(238, 154, 255);
+            animation-timing-function: cubic-bezier(0.84, 0.33, 0.14, 0.82);
+            /* cubic-bezier는 나만의 값을 정의하는 것 */
+            /* 웹페이지에서 f12로 조절한 값을 가져와서 입력하면 된다 */
+        }
+        @keyframes boxAnimation {
+            from {
+                width: 200px;
+            }
+            /* 시작 */
+            to {
+                width: 500px;
+            }
+            /* 끝 */
+        }
+        /* @keyframes + 이름 하면 내가 애니메이션을 만들 수 있음 */
+    </style>
+</head>
+<body>
+    <div class="box">liner : 일정하게</div>
+    <div class="box">ease : 느리게 - 빠르게</div>
+    <div class="box">ease-in : 빠르게 - 느리게</div>
+    <div class="box">ease-out : 느리게 - 빠르게</div>
+    <div class="box">ease-in-out : 느리게 - 빠르게 - 느리게</div>
+    <div class="box">자신만의 값을 정의</div>
+    <!-- 웹 페이지에서 f12로 속도를 조절할 수 있음 -->
+</body>
+</html>
