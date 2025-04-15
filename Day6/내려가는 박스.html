@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내려가는 박스</title>
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 16px;
+        }
+        @media (max-width: 1400px) {
+            section {
+                flex-wrap: wrap;
+            }
+            /* 그냥 wrap보다 좀 더 보이는게 괜찮은듯 */
+        }
+    </style>
+</head>
+<body>
+    <!-- ul에 li도 좋았다 -->
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>

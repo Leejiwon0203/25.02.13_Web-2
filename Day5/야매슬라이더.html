@@ -4,8 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>야매 슬라이더</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            background-color: rgb(201, 105, 74);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 20px;
+            display: block;
+            margin: 50px auto;
+            padding: 16px 24px;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        ul {
+            width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            /* min-width를 주고 히든을 줘야 넘어가는걸 안보이게 할 수 있음 */
+            margin: 0 auto;
+        }
+
+        li {
+            min-width: 268px;
+            height: 150px;
+            margin: 0 16px;
+        }
+
+        li:nth-child(1) {
+            background-image: url(./이미지/29TKZO441I_1.png);
+            background-size: cover;
+        }
+        li:nth-child(2) {
+            background-image: url(./이미지/2_붉은여우.jpg);
+            background-size: cover;
+        }
+        li:nth-child(3) {
+            background-image: url(./이미지/5700_7037_4436.jpg);
+            background-size: cover;
+        }
+        li:nth-child(4) {
+            background-image: url(./이미지/_104454565_mary-mcgowan_caught-in-the-act_00001294.jpg);
+            background-size: cover;
+        }
+        li:nth-child(5) {
+            background-image: url(./이미지/BIMGMM0000005789.png);
+            background-size: cover;
+        }
+        li:nth-child(6) {
+            background-image: url(./이미지/image.png);
+            background-size: cover;
+        }
+        li:nth-child(7) {
+            background-image: url(./이미지/news-p.v1.20240312.1fe0ea11b3f24d33b6902cd6218142d2_P1.jpg);
+            background-size: cover;
+        }
+        li:nth-child(8) {
+            background-image: url(./이미지/o40qvr6a199g9wi3lg0o-795x436.jpg);
+            background-size: cover;
+        }
+
+        button:focus + ul > li {
+            /* +를 쓰는 이유는 button이랑 ul이 인접 형제이기 때문에 */
+            animation-name: slide;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;       
+            animation-timing-function: cubic-bezier(0.65, 0.26, 0.22, 0.85);
+        }
+
+        @keyframes slide {
+            form {
+                transform: translatex(0);
+            }
+
+            to {
+                transform: translateX(-1200px);
+            }
+        }
+
+
+    </style>
 </head>
 <body>
-    
+    <section>
+        <button>
+            동물들이 지나가요
+        </button>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
 </body>
 </html>
